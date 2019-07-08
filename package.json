@@ -1,0 +1,27 @@
+{
+  "name": "ratemyprofdata",
+  "version": "1.0.0",
+  "description": "Uses the rmp-api by GitHub user shafi-dayatar and displays useful data for teacher information in colleges.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "express": "4.17.1",
+    "pg-promise": "8.7.3",
+    "pug": "2.0.4",
+    "rmp-api": "github:shafi-dayatar/rmp-api"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bqin01/ratemyprof.git"
+  },
+  "author": "Bill Qin <bzqin88@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bqin01/ratemyprof/issues"
+  },
+  "homepage": "https://github.com/bqin01/ratemyprof#readme"
+}

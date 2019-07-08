@@ -1,0 +1,73 @@
+html 
+  head 
+    link(rel='stylesheet', href='/styles/index.css', type='text/css')
+  body
+    div.wide-container#desc(style = "background-color: #AAFF88;")
+      div#info-box
+        h1 Rate My Professors API Querying 
+        p 
+          | The purpose of this application is to allow students (and all others interested) to more easily access the information on
+          |
+          a(href = "https://ratemyprofessors.com") ratemyprofessors.com
+          |
+          | in a more substantial manner through the usage of the
+          |
+          a(href = "https://github.com/shafi-dayatar/rmp-api") Rate My Professors API
+          | .
+    div.wide-container#querybox(style = "background-color: #7F7FFF;")
+      div#search-options
+        h1 Select one or more query options...
+        form
+          div#name-queries
+            div.query
+              label(for = "fname-prof") Professor's First Name
+              input(type = "text", id = "fname", name = "fname-prof")
+            div.query
+              label(for = "lname") Professor's Last Name
+              input(type = "text", id = "lname", name = "lname-prof")
+          div.query
+            label(for = "instit") Institution
+            input(type = "text", id = "instit", name = "instit")
+          div.query
+            label(for = "depart") Department
+            select(class = "form-control", id = "depart")
+              option -----
+              option PLACE
+              option HOLDER
+          div#rating-queries
+            div.query
+              label(for = "quality") Min Quality (out of 5)
+              select(class = "form-control", id = "quality")
+                option ---
+                - var n = 50;
+                while n >= 10
+                  if n%10 == 0
+                    option= n/10 + ".0"
+                  else
+                    option= n/10 
+                  - n -= 1;
+            div.query
+              label(for = "difficulty") Max Difficulty (out of 5)
+              select(class = "form-control", id = "quality")
+                option ---
+                - var n = 50;
+                while n >= 10
+                  if n%10 == 0
+                    option= n/10 + ".0"
+                  else
+                    option= n/10 
+                  - n -= 1;
+            div.query
+              label(for = "wouldtakeagain")  % Would Take Again
+              select(class = "form-control", id = "quality")
+                option ---
+                - var n = 100;
+                while n >= 10
+                  option= n + "%"
+                  - n -= 10;
+          input(type = "submit", id = "query-button",
+           value = "Query!")
+    div.wide-container#filler(style = "background-color: #AAFF88;")
+              
+              
+          

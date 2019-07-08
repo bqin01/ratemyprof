@@ -1,0 +1,64 @@
+html
+{
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+body
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px;
+}
+input, select{
+  padding: 5px;
+  font: 400 20px "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  border-radius: 5px;
+  border: 2px solid #4f4f4f;
+  width: 100%;
+  color: #444444;
+}
+input[type=text]:focus {
+  border: 2px solid #cc6666;
+}
+.wide-container
+{
+  width: 100%;
+}
+#info-box
+{
+  margin-left: 50px;
+  width: 600px;
+  padding: 15px 0px 30px 20px;
+}
+#search-options{
+  margin-left: 125px;
+  width: 800px;
+  padding: 15px 0px 30px 20px;
+}
+#name-queries, #rating-queries{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#query-button{
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  height: 50px;
+  width: 200px;
+  background-color: #66cc66;
+}
+#query-button:hover{
+  background-color: white;
+}
+.query
+{
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+#filler{
+  flex-grow: 1;
+}
