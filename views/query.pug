@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/styles/query.css', type='text/css')
+  body
+    div#query-info
+      h1 Your query asked for all professors...
+      if fname != ""
+        p
+          | ...whose first name contains
+          |
+          b(class = "querydata")= fname
+          | .
+      if lname != ""
+        p
+          | ...whose last name contains
+          |
+          b(class = "querydata")= lname
+          | .
+      if instit != ""
+        p
+          | ...at
+          |
+          b(class = "querydata")= instit
+          | .
+      if depart != "-" && depart != ""
+        p
+          | ...in the 
+          |
+          b(class = "querydata")= depart
+          |
+          | department.
+      if quality != "-" && quality != ""
+        p
+          | ...with quality of at least
+          |
+          b(class = "querydata")= quality
+          | .
+      if difficulty != "-" && difficulty != ""
+        p
+          | ...with difficulty at most
+          |
+          b(class = "querydata")= difficulty
+          | .
+      if takeagain != "-" && takeagain != ""
+        p
+          | ...with at least
+          |
+          b(class = "querydata")= takeagain
+          |
+          | percent of their students willing to retake the class.

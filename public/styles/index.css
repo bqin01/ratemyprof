@@ -9,16 +9,24 @@ body
   justify-content: space-between;
   margin: 0px;
 }
-input, select{
+input[type=text], select{
   padding: 5px;
+  padding-right: 0px;
   font: 400 20px "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   border-radius: 5px;
   border: 2px solid #4f4f4f;
   width: 100%;
   color: #444444;
 }
+select{
+  width: 101%;
+}
 input[type=text]:focus {
   border: 2px solid #cc6666;
+}
+input[type=checkbox i] {
+  width: 1em;
+  height: 1em;
 }
 .wide-container
 {
@@ -41,12 +49,12 @@ input[type=text]:focus {
   justify-content: space-between;
 }
 #query-button{
+  border: 5px solid black;
+  border-radius: 5px;
   transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
   margin-top: 30px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
+  font: 400 20px "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   height: 50px;
   width: 200px;
   background-color: #66cc66;
@@ -60,5 +68,19 @@ input[type=text]:focus {
   margin-bottom: 15px;
 }
 #filler{
-  flex-grow: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+#na-enable{
+  width: 50px;
+}
+.boolean{
+  width: 250px;
+}
+.centered{
+  margin-left: 50%;
+    transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }
