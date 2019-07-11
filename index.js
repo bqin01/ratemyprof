@@ -1,12 +1,54 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var rmp = require("rmp-api");
+var mongoose = require("mongoose");
 
+var uriloc = './database/mongooseuri.txt';
+var mongoconfig = "";
+try{
+  mongoconfig = fs.readFileSync(uriloc, 'utf8');
+}
+catch(err){
+  mongoconfig = "mongodb://localhost:27107/Professor";
+}
+var uri = process.env.MONGODB_URI || mongoconfig;
+var port = 8765;
 var app = express();
 
+mongoose.connect(uri, {useNewUrlParser: true});
+var profSchema = new mongoose.Schema({
+  fname: {
+    type: String,
+    lowercase: true,
+    required: true
+  },
+  lname: {
+    type: String,
+    lowercase: true,
+    required: true
+  },
+  instit: {
+    type: String,
+    lowercase: true,
+    required: true
+  },
+  depart: {
+    type: String,
+    lowercase: true
+  },
+  quality: Number,
+  difficulty: Number,
+  takeagain: Number
+});
+var connection = mongoose.connection;
+connection.on('error', function(err) {
+  console.log('Error connecting to ' + uri + ': ' + err);
+});
+connection.once('open', function(){
+  console.log('Successfully connected to MongoDB.');
+});
+
 app.use(express.static('public'));
-app.use(express.urlencoded());
-app.use(express.json());
 
 app.get('/', function(req, res){
   res.render("index.pug");
@@ -33,5 +75,5 @@ app.get('/query', function(req, res){
   });
 });
 
-app.listen(process.env.PORT || 8765);
-console.log("We out here at port " + (process.env.PORT || 8765));
+app.listen(process.env.PORT || port);
+console.log("We out here at port " + (process.env.PORT || port));

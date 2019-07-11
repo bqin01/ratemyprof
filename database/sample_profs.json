@@ -1,0 +1,48 @@
+{
+  "professors": [
+  {
+    "fname": "john",
+    "lname": "palfrey",
+    "instit": "phillips academy",
+    "depart": "History",
+    "quality": 5.0,
+    "difficulty": 4.3,
+    "takeagain": 100
+  },
+  {
+    "fname": "mika",
+    "lname": "latva-kokko",
+    "instit": "phillips academy",
+    "depart": "Physics",
+    "quality": 4.8,
+    "difficulty": 5.0,
+    "takeagain": 82
+  },
+  {
+    "fname": "jonathan",
+    "lname": "sit",
+    "instit": "phillips academy",
+    "depart": "Biology",
+    "quality": 5.0,
+    "difficulty": 2.3,
+    "takeagain": 97
+  },
+  {
+    "fname": "keith",
+    "lname": "robinson",
+    "instit": "phillips academy",
+    "depart": "Biology",
+    "quality": 4.6,
+    "difficulty": 3.8,
+    "takeagain": 77
+  },
+  {
+    "fname": "derek",
+    "lname": "jacoby",
+    "instit": "phillips academy",
+    "depart": "Music",
+    "quality": 3.7,
+    "difficulty": 2.1,
+    "takeagain": 80
+  }]
+}
