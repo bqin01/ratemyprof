@@ -18,6 +18,19 @@ input[type=text], select{
   width: 100%;
   color: #444444;
 }
+svg
+{
+  position: absolute;
+  z-index: -1;
+}
+a
+{
+  transition-duration: 0.3px;
+  -webkit-transition-duration: 0.3px;
+}
+a:hover{
+  color: red;
+}
 select{
   width: 101%;
 }
@@ -39,7 +52,7 @@ input[type=checkbox i] {
   padding: 15px 0px 30px 20px;
 }
 #search-options{
-  margin-left: 125px;
+  margin-left: 250px;
   width: 800px;
   padding: 15px 0px 30px 20px;
 }

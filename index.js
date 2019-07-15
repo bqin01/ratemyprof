@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var fs = require("fs");
 var rmp = require("rmp-api");
 var mongoose = require("mongoose");
 
@@ -9,6 +10,7 @@ try{
   mongoconfig = fs.readFileSync(uriloc, 'utf8');
 }
 catch(err){
+  console.log('Could not find file ' + uriloc + ': ' + err);
   mongoconfig = "mongodb://localhost:27107/Professor";
 }
 var uri = process.env.MONGODB_URI || mongoconfig;
